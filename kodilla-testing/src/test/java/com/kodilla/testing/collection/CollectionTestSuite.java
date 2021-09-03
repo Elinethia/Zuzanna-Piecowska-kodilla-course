@@ -1,8 +1,6 @@
 package com.kodilla.testing.collection;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import com.kodilla.testing.collection.OddNumbersExterminator;
 
 
@@ -14,6 +12,16 @@ import java.util.List;
 public class CollectionTestSuite {
 
    OddNumbersExterminator exterminator = new OddNumbersExterminator();
+
+       @BeforeEach
+       public void before() {
+           System.out.println("begin");
+       }
+
+       @AfterEach
+       public void after() {
+           System.out.println("end");
+       }
 
        @DisplayName(
                 "checking behavior when list is empty"
@@ -34,7 +42,6 @@ public class CollectionTestSuite {
             //Assert
             Assertions.assertEquals(eList, rList);
         }
-
 
         @DisplayName(
                 "checking behavior when list is full"

@@ -10,10 +10,12 @@ public class OddNumbersExterminator {
         List<Integer> oddNumbersList = new ArrayList<>();
 
         for(int num : numbers) {
-            if (num % 2 == 0) {
+            if (num % 2 == 0 ) {
                 oddNumbersList.add(num);
             }
-
+            if (num % 2 != 0) {
+                oddNumbersList.add(num);
+            }
         }
             return oddNumbersList;
     }
