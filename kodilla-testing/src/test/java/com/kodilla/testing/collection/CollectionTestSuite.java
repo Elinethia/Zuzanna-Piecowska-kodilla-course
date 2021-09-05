@@ -6,6 +6,7 @@ import com.kodilla.testing.collection.OddNumbersExterminator;
 
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 
@@ -31,15 +32,15 @@ public class CollectionTestSuite {
         public void testOddNumbersExterminatorEmptyList() {
 
 
-            //Arrange
+            //Given
             List<Integer> eList = new ArrayList<>();
 
-            //Act
+            //When
             List<Integer> rList = exterminator.exterminate(eList);
 
             System.out.println("Test");
 
-            //Assert
+            //Then
             Assertions.assertEquals(eList, rList);
         }
 
@@ -50,30 +51,28 @@ public class CollectionTestSuite {
         @Test
         public void testOddNumbersExterminatorNormalsList() {
 
-            //Arrange
-           List<Integer> fList = new ArrayList<>();
+            //Given
+          List<Integer> fList = new ArrayList<>();
 
             fList.add(4);
             fList.add(7);
-            fList.add(21);
-            fList.add(29);
-            fList.add(5);
-            fList.add(13);
-            fList.add(16);
-            fList.add(9);
-            fList.add(20);
-            fList.add(12);
+            fList.add(22);
 
-            //Act
-            List<Integer> r1List = exterminator.exterminate(fList);
+            List<Integer> expList = new ArrayList<>();
 
-            System.out.println("Test");
+            expList.add(4);
+            expList.add(22);
 
-            //Assert
-            Assertions.assertEquals(fList, r1List);
+            //When
+                    List<Integer> r1List = exterminator.exterminate(fList);
+                    System.out.println("Test");
+            //Then
+           Assertions.assertEquals(expList, r1List);
+
+
+
 
         }
 
 }
-
 

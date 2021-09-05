@@ -13,11 +13,7 @@ public class OddNumbersExterminator {
             if (num % 2 == 0 ) {
                 oddNumbersList.add(num);
             }
-            if (num % 2 != 0) {
-                oddNumbersList.add(num);
-            }
         }
             return oddNumbersList;
     }
-
-}
+    }
